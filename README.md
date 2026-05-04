@@ -38,13 +38,14 @@
 ### 🔁 How KaliBench Is Constructed and Evaluated
 > **Accurate Query-to-CLI evaluation requires both high-quality data and rigorous validation. KaliBench is built through:
 Multi-stage Data Verification \& Cleaning including:
-a. LLM-based verification;
-b. Terminal-based sandbox verification and Rule-based filtering;
-c. Human-in-Loop Verification and Manual inspection of the data based on failure cases involving both the AI-agent and the human. 
-d. Semantic deduplication and dataset splitting.
+I. LLM-based verification;
+II. Terminal-based sandbox verification and Rule-based filtering;
+III. Human-in-Loop Verification and Manual inspection of the data based on failure cases involving both the AI-agent and the human. 
+IV. Semantic deduplication and dataset splitting.
+> 
 -We also have our Training Protocols:
-a. Supervised-FineTuning (SFT)
-b. Reinforcement Learning with Verifiable Reward (RLVR with GRPO)**
+I. Supervised-FineTuning (SFT)
+II. Reinforcement Learning with Verifiable Reward (RLVR with GRPO)**
 > 
 <p align="center">
   <img src="assets/pipeline.png" alt="KaliBench Evaluation Pipeline" width="80%">
