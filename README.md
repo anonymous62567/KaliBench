@@ -103,7 +103,7 @@ Multi-stage Data Verification \& Cleaning including:
 KaliBench provides 3 files, 1. A full document of 8.5K query-command pairs 2. An evaluation document of selective 5000 query-command pairs (the users can also select their own evaluation set from the full 8.5K document), and 3. A Raw Kali Linux document containing the original usage code (manuscript) for all Kali 2,809 tools.
 
 ### Available Datasets
-#### -User can directly find the aforementioned 3 data files (.jsonl format) in the folder: "KaliBench_data" 
+#### User can directly find the aforementioned 3 data files (.jsonl format) in the folder: "KaliBench_data" 
 <!-- #### -We additionally provide raw homepages about all Kali tools, which not only include each tool's usage code, but also include other metadata such as a tool's label (metapackages), packagesinfo, and so on.
 - The tools' homepages are hosted on Hugging Face: **[RISys-Lab/kali-tools](https://huggingface.co/datasets/RISys-Lab/kali-tools)**, and can be viewed in the following way: 
   
@@ -129,16 +129,16 @@ ds['train'][1]['metadata']['metapackages']
 # replace ".\" with your absolute route, replace "models/meta-llama/Meta-Llama-3-8B-Instruct" with your model's storage route
 # out_labels: output label file is the same for 3 modes
 
-python .\request_prompt.py --mode unrestricted --input ".\KaliBench_Eval_4097.jsonl" --subtools ".\Kali_Tool_Subtools_UsageCode.jsonl" --out_requests ".\unrestricted_requests.jsonl" --out_labels ".\labels.jsonl" --model "models/meta-llama/Meta-Llama-3-8B-Instruct" --temperature 0.2 --tools_per_chunk 20 --max_usage_chars 800 --include_usage_in_prompt false
+python .\request_prompt.py --mode unrestricted --input ".\kalibench_verified_test_5000.jsonl" --subtools ".\Kali_Tool_Subtools_UsageCode.jsonl" --out_requests ".\unrestricted_requests.jsonl" --out_labels ".\labels.jsonl" --model "models/meta-llama/Meta-Llama-3-8B-Instruct" --temperature 0.2 --tools_per_chunk 20 --max_usage_chars 800 --include_usage_in_prompt false
 
 ```
 - **Restricted Mode**
 ```powershell
-python .\request_prompt.py --mode restricted --input ".\KaliBench_Eval_4097.jsonl" --subtools ".\Kali_Tool_Subtools_UsageCode.jsonl" --out_requests ".\restricted_requests.jsonl" --out_labels ".\labels.jsonl" --model "models/meta-llama/Meta-Llama-3-8B-Instruct" --temperature 0.2 --tools_per_chunk 20 --max_usage_chars 800 --include_usage_in_prompt false
+python .\request_prompt.py --mode restricted --input ".\kalibench_verified_test_5000.jsonl" --subtools ".\Kali_Tool_Subtools_UsageCode.jsonl" --out_requests ".\restricted_requests.jsonl" --out_labels ".\labels.jsonl" --model "models/meta-llama/Meta-Llama-3-8B-Instruct" --temperature 0.2 --tools_per_chunk 20 --max_usage_chars 800 --include_usage_in_prompt false
 ```
 - **Hinted Mode**
 ```powershell
-python .\request_prompt.py --mode hinted --input ".\KaliBench_Eval_4097.jsonl" --subtools ".\Kali_Tool_Subtools_UsageCode.jsonl" --out_requests ".\hinted_requests.jsonl" --out_labels ".\labels.jsonl" --model "models/meta-llama/Meta-Llama-3-8B-Instruct" --temperature 0.2 --tools_per_chunk 20 --max_usage_chars 800 --include_usage_in_prompt true
+python .\request_prompt.py --mode hinted --input ".\kalibench_verified_test_5000.jsonl" --subtools ".\Kali_Tool_Subtools_UsageCode.jsonl" --out_requests ".\hinted_requests.jsonl" --out_labels ".\labels.jsonl" --model "models/meta-llama/Meta-Llama-3-8B-Instruct" --temperature 0.2 --tools_per_chunk 20 --max_usage_chars 800 --include_usage_in_prompt true
 
 ```
 
@@ -164,6 +164,7 @@ python model_score.py --vllm_file ".\unres_llama_8b-out.jsonl" --label_file ".\l
 python .\dim_score.py --models-folder ".\score_folder" --output-folder ".\dim_score" --use-hf --hf-dataset "RISys-Lab/kali-tools"
 ```
 
+<!--
 ## 📝 Citation
 
 If you find KaliBench useful in your research, please consider citing our paper:
@@ -175,5 +176,5 @@ If you find KaliBench useful in your research, please consider citing our paper:
   year={2026}
 }
 ```
-
+-->
 
