@@ -6,14 +6,12 @@
 
 ## 📋 Table of Contents
 
-- [News](#-news)
 - [Overview](#-overview)
 - [KaliBench Pipeline and Samples](#-kalibench-pipeline-and-samples)
 - [Getting Started](#-getting-started)
 - [Dataset and Benchmarks](#-dataset-and-benchmarks)
 - [Evaluation](#-evaluation)
 - [Scoring](#-scoring)
-- [Citation](#-citation)
 
 ---
 
