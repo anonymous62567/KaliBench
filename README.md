@@ -42,8 +42,7 @@ I. LLM-based verification;
 II. Terminal-based sandbox verification and Rule-based filtering;
 III. Human-in-Loop Verification and Manual inspection of the data based on failure cases involving both the AI-agent and the human. 
 IV. Semantic deduplication and dataset splitting.
-> 
--We also have our Training Protocols:
+> -We also have our Training Protocols:
 I. Supervised-FineTuning (SFT)
 II. Reinforcement Learning with Verifiable Reward (RLVR with GRPO)**
 > 
