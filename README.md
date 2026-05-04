@@ -104,7 +104,7 @@ KaliBench provides 3 files, 1. A full document of 8.5K query-command pairs 2. An
 
 ### Available Datasets
 #### -User can directly find the aforementioned 3 data files (.jsonl format) in the folder: "KaliBench_data" 
-#### -We additionally provide raw homepages about all Kali tools, which not only include each tool's usage code, but also include other metadata such as a tool's label (metapackages), packagesinfo, and so on.
+<!-- #### -We additionally provide raw homepages about all Kali tools, which not only include each tool's usage code, but also include other metadata such as a tool's label (metapackages), packagesinfo, and so on.
 - The tools' homepages are hosted on Hugging Face: **[RISys-Lab/kali-tools](https://huggingface.co/datasets/RISys-Lab/kali-tools)**, and can be viewed in the following way: 
   
 ```bash
@@ -118,6 +118,7 @@ ds['train'][1]
 # View a tool's label
 ds['train'][1]['metadata']['metapackages']
 ```
+-->
 
 ## ✅ Evaluation
 > We used the [Offline Inference with the OpenAI Batch file format](https://docs.vllm.ai/en/stable/examples/offline_inference/openai_batch/?h=batch+inference#file-format) to do inference in 2 steps:
