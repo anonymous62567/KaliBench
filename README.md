@@ -100,7 +100,7 @@ Multi-stage Data Verification \& Cleaning including:
 
 
 ## 📊 Dataset and Benchmarks
-KaliBench provides 3 files, 1. A full document of 14.5K query-command pairs 2. An evaluation document of selective 4097 query-command pairs (the users can also select their own evaluation set from the full 14.5K document), and 3. A Raw Kali Linux document containing the original usage code (manuscript) for all Kali tools (758) and subtools (2,809).
+KaliBench provides 3 files, 1. A full document of 8.5K query-command pairs 2. An evaluation document of selective 5000 query-command pairs (the users can also select their own evaluation set from the full 8.5K document), and 3. A Raw Kali Linux document containing the original usage code (manuscript) for all Kali 2,809 tools.
 
 ### Available Datasets
 #### -User can directly find the aforementioned 3 data files (.jsonl format) in the folder: "KaliBench_data" 
