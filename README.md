@@ -1,8 +1,6 @@
-# <img src="assets/logo.png" alt="KaliBench" width="100"/>: Evaluating LLM Function Calling on Kali Linux for Cybersecurity Tool Use
+# <img src="assets/logo.png" alt="KaliBench" width="100"/>: A Fine-Grained Benchmark for Cybersecurity Tool Use on Kali Linux with Runtime-Free Verifiable Rewards
 
 **Official repository for the KaliBench paper (Under Review).**
-
-Authors: Pengfei Li, Naufal Suryanto, Sicheng Zhang, Muzammal Naseer.
 
 ---
 
@@ -19,15 +17,9 @@ Authors: Pengfei Li, Naufal Suryanto, Sicheng Zhang, Muzammal Naseer.
 
 ---
 
-## 📢 News
-
-- [06 Jan 2026] KaliBench: Evaluating LLM Function Calling on Kali Linux for Cybersecurity Tool Use is submitted to ACL ARR 2026 January Submission.
-
 ## 🔥 Overview
-**KaliBench** is a benchmark that targets NL-to-CLI translation on Kali Linux, evaluating LLMs across three tool-knowledge settings and 23 fine-grained tool dimensions. It comprises 4,097 query--command pairs spanning 605 Kali tools and 2,138 sub-tools. Experiments on the benchmark show that optional flag–value binding is the primary bottleneck for correct command generation, with consistent failure patterns across models.
+**KaliBench** is a benchmark that targets Query-to-CLI translation on Kali Linux, evaluating LLMs across three tool-knowledge settings and 23 fine-grained tool dimensions. It comprises 8,504 query-command pairs spanning 1,642 sub-tools. We find that low command accuracy mostly stems from argument reconstruction errors, and SFT+GRPO can lift 8B models to near 70B performance.
 
-### 🔍 Tool Invocation Gap in Existing Cybersecurity Benchmarks
-> **Current cybersecurity benchmarks largely focus on knowledge recall or end-to-end agent performance, but fail to isolate whether models can accurately invoke real-world security tools. In practice, cybersecurity workflows depend on strict, schema-free command-line interfaces, where minor mistakes in tool selection, flag usage, or argument ordering can break execution. Evaluating models’ function-calling ability is therefore essential to determine whether they can reliably translate natural-language security intent into precise, executable commands in real operational settings.**
 
 ### 🔧 KaliBench Tool Coverage Overview
 > **Cybersecurity workflows span diverse capabilities across the entire attack and defense lifecycle, from reconnaissance to exploitation, to forensic analysis. KaliBench explicitly captures this diversity by covering 23 Kali Linux capability dimensions, enabling systematic evaluation of model performance across different security phases rather than isolated tool families.**
@@ -44,7 +36,15 @@ Authors: Pengfei Li, Naufal Suryanto, Sicheng Zhang, Muzammal Naseer.
 ## 🧩 KaliBench Pipeline and Samples
 
 ### 🔁 How KaliBench Is Constructed and Evaluated
-> **Accurate NL-to-CLI evaluation requires both high-quality data and rigorous validation. KaliBench is built through LLM-based data generation, multi-round verification and regeneration to eliminate hallucinated arguments, and representative sample selection. Models are evaluated under three modes: unrestricted, restricted, and hinted, using alias-aware parsing and fine-grained scoring over tools, arguments, and capability dimensions.**
+> **Accurate Query-to-CLI evaluation requires both high-quality data and rigorous validation. KaliBench is built through:
+Multi-stage Data Verification \& Cleaning including:
+a. LLM-based verification;
+b. Terminal-based sandbox verification and Rule-based filtering;
+c. Human-in-Loop Verification and Manual inspection of the data based on failure cases involving both the AI-agent and the human. 
+d. Semantic deduplication and dataset splitting.
+-We also have our Training Protocols:
+a. Supervised-FineTuning (SFT)
+b. Reinforcement Learning with Verifiable Reward (RLVR with GRPO)**
 > 
 <p align="center">
   <img src="assets/pipeline.png" alt="KaliBench Evaluation Pipeline" width="80%">
