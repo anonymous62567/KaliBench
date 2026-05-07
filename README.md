@@ -7,7 +7,7 @@
 ## 📋 Table of Contents
 
 - [Overview](#-overview)
-- [KaliBench Pipeline and Samples](#-kalibench-pipeline-and-samples)
+- [KaliBench Samples](#-kalibench-pipeline-and-samples)
 - [Getting Started](#-getting-started)
 - [Dataset and Benchmarks](#-dataset-and-benchmarks)
 - [Evaluation](#-evaluation)
@@ -31,7 +31,7 @@
 </p>
 -->
 
-## 🧩 KaliBench Pipeline and Samples
+<!-- ## 🧩 KaliBench Pipeline and Samples
 
 ### 🔁 How KaliBench Is Constructed and Evaluated
 > **Accurate Query-to-CLI evaluation requires both high-quality data and rigorous validation. KaliBench is built through:
@@ -57,7 +57,7 @@ Multi-stage Data Verification \& Cleaning including:
 </p>
 -->
 
-
+-->
 
 ### 🧪 KaliBench Samples
 > **Each KaliBench sample contains a natural-language query with decomposed parameters and a single canonical CLI command. Together, the samples span 23 tool categories and five cyber phases, enabling fine-grained analysis of where models succeed or fail in translating security intent into executable commands.**
