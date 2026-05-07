@@ -57,7 +57,7 @@ Multi-stage Data Verification \& Cleaning including:
 </p>
 -->
 
--->
+
 
 ### 🧪 KaliBench Samples
 > **Each KaliBench sample contains a natural-language query with decomposed parameters and a single canonical CLI command. Together, the samples span 23 tool categories and five cyber phases, enabling fine-grained analysis of where models succeed or fail in translating security intent into executable commands.**
